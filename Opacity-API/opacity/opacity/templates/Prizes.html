@@ -1,0 +1,121 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+  <title>Opacity</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="{% static "OpacityCSS.css" %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    <a class="navbar-brand" href="#myPage">Opacity</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://opacityapp.com/">Home</a></li>
+        <li><a href="https://opacityapp.com/opacity/">Opacity</a></li>
+        <li><a href="https://opacityapp.com/prizes/">Prizes</a></li>
+        <li><a href="https://opacityapp.com/about/">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="tour" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">Give-Away Prizes</h3>
+    <p class="text-center">Weclome to Opacity's Prize section! Below you will find the prize for the month of January. 
+      We do monthly prize draws and change up the prizes on the 1st of every month.
+      In order to enter the prize draw you must have the amount of points listed on the prize. Please scroll below to find the rules and how to enter in the prize draws
+      </p>
+     <br>
+
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+        <br>
+          <img src="{% static "Images/giftcard.jpg" %}" class="img-responsive center-block"   alt="Itunes-Giftcard">
+          <p><strong>$50 iTunes gift card</strong></p>
+          <p>50 Points</p>
+        </div>
+      </div>
+       <br>
+
+
+    </div>
+    <h3 class="text-center">Rules, How to Enter and the Prize Process</h3>
+    <p class="text-center">If you signed up with Opacity through the Opacity registration you will automatically be entered into the prize draws
+    if you have the given amount of points by the end of the month. <br><br>If you signed up to Opacity using Facebook,
+    in order to enter the prize draw you must email <b><u>prizes@opacityapp.com</u></b> indicating your username to us.
+    The reason you cannot automatically be entered is because we do not have your email when logging in through
+    Facebook so if you win we need a way to contact you.
+    <br><br>
+    If you are using Facebook, you only need to send us an email for the very first prize. We will automatically add it to the database so you can automatically be entered into future prize draws.
+    <br><br>
+    Prizes will close on the last day of the month at 23:59. We will compile a list of all the users entered into the draw
+    and run a random number generator and will email the winner of the prize. The winner will have 3 business days to accept the prize.
+    If the winner does not accept the prize in the 3 days, another winner will be chosen.
+
+    If you have any questions or concerns about the prizes and the process, please feel free to email <b><u>prizes@opacityapp.com</u></b>
+  </p>
+      <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>    <br> <br>
+  </div>
+ </div>
+
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Opacity - available today, exclusively on the iOS App Store!</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip();
+
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>

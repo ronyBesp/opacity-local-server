@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Opacity</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="OpacityCSS.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    <a class="navbar-brand" href="#myPage">Opacity</a>
+    </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="Opacity.html">Home</a></li>
+        <li><a href="OpacityInfo.html">Opacity</a></li>
+        <li><a href="AboutUs.html">About</a></li>
+        <li><a href="ContactUs.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="band" class="container text-center">
+   <h2>Contact Us</h2>
+  <p>&nbsp;</p>
+   <p>Contact us and we will be sure to get back to you!</p>
+   <br>
+  <form>
+    <p>First name:<br>
+      <input type="text" name="firstname">
+      <br>
+      Last name:<br>
+      <input type="text" name="lastname">
+      <br>
+      Email:<br>
+      <input type="email" name="lastname">
+      <br>
+      Description:<br>
+      
+      <textarea name="textField" id="textField" cols="45" rows="5"></textarea>
+    </p>
+    <p><br>
+      <input type="submit" value="Submit">
+    </p>
+ 
+  </form> 
+</div>
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Opacity Available In The IOS App Store Today!</p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <title>Opacity</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="{% static "OpacityCSS.css" %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86185704-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    <a class="navbar-brand" href="https://opacityapp.com">Opacity</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://opacityapp.com">Home</a></li>
+        <li><a href="https://opacityapp.com/opacity/">Opacity</a></li>
+        <li><a href="https://opacityapp.com/prizes/">Prizes</a></li>
+        <li><a href="https://opacityapp.com/about/">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="googleMap"></div>
+
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqEtSVqU9z183UHVmbxg2ecafAEpm_7KU"></script>
+<script>
+var myCenter = new google.maps.LatLng(43.652987, -79.397926);
+
+function initialize() {
+var mapProp = {
+center:myCenter,
+zoom:12,
+scrollwheel:false,
+draggable:false,
+mapTypeId:google.maps.MapTypeId.ROADMAP
+};
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+position:myCenter,
+});
+
+marker.setMap(map);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<div id="band" class="container text-center">
+  <h2>Meet the team + Contact Info</h2>
+  <p>&nbsp;</p>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Rony Besprozvanny</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src={% static "Images/ronyBPic1.jpg" %} class="img-circle person" alt="RonyB" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+        <p>Co-Founder of Opacity</p>
+        <p>Queen's Computer Engineering 2018. Love challenges, exploring unfamiliar fields and developing new projects!</p>
+        <p>Email: rbesp@opacityapp.com</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Leron Bergelson</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="{% static "Images/leron.jpg" %}" class="img-circle person" alt="LeronB" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>Co-Founder of Opacity</p>
+        <p>George Brown Game Programming and Development. Love working on new projects and creating interesting content!</p>
+        <p>Email: lberg@opacityapp.com</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Brandon Benchluch</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src={% static "Images/Brandon1.jpeg" %} class="img-circle person" alt="BrandonB" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>VP of Social Advertising and Marketing</p>
+        <p>York Kinesiology 2018. Very creative and loves talking to people. Always looking for new ways to advertise a project and embrace new technology.</p>
+        <p>Email: info@opacityapp.com</p>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <h2>Sponsers</h2>
+  <p>Opacity is now proudly apart of Queen's Innovation Park</p>
+  <br>
+  <img src="{% static "Images/ip_logo.png" %}" class="img-responsive center-block" alt="Queens Innovation Park">
+  
+  <br><br>
+  <h2>Contact us</h2>
+  <p>Please feel free to email any of us about anything regarding the platform - from feature requests and feedback to bugs.
+    In addition, if you would like to join the team please feel free to email us!</p>
+  <p>You can also find us on YouTube by clicking on the image below!</p>
+  <p>&nbsp;</p>
+<a href="https://www.youtube.com/opacityapplication"><img src="{% static "Images/YouTube.png" %}" class="img-responsive center-block" alt="YouTube" longdesc="https://www.youtube.com"></a>
+</div>
+
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Opacity - available today, exclusively on the iOS App Store!</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip();
+
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>

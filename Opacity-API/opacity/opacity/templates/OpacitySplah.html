@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <title>Opacity</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="{% static "OpacityCSS.css" %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86185704-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    <a class="navbar-brand" href="http://opacityapp.com">Opacity</a>
+    </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://opacityapp.com">Home</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="band" class="container text-center">
+  <p><img src="{% static "Images/logo.png" %}"  alt="Opacity Icon width=" width="546" height="300"></p>
+      <br>
+      <h3>Welcome to Opacity! Official website coming soon! </h3>
+     </div>
+
+
+<!--
+<div class="container2 text-center" >
+  <video class="img-responsive" width="1000" height="550" poster="{% static "Images/Capture.JPG" %}" controls>
+    <source src="{% static "Videos/OpacityTrailer.mp4" %}" type="video/mp4">
+  Your browser does not support this Opacity video.
+</video>
+</div>
+-->
+<!-- Footer 
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Opacity - Coming soon!</p>
+</footer>
+-->
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip();
+
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
