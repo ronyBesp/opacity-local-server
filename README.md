@@ -1,8 +1,9 @@
 # opacity-local-server
 Local Django Python Server for Opacity
 
-The Local Server for Opacity is meant to be run with the Opacity iOS app [repo for iOS App](https://github.com/LeronBergelson/Opacity-iOS)
-All the information about the Opacity project and its goals, etc.. can also be found on the Opacity iOS App repo.
+The Local Server for Opacity is meant to be run with the Opacity iOS app [repo](https://github.com/LeronBergelson/Opacity-iOS)
+
+All the information about the Opacity project and its goals, etc.. can also be found on the Opacity iOS App [repo](https://github.com/LeronBergelson/Opacity-iOS).
 
 ## Set-Up
 
@@ -15,11 +16,11 @@ To initially set-up the server please follow the following steps:
 
 ## Setting up Facebook Authentication
 
-By default when users run the local server with the Opacity iOS app [repo for iOS App](https://github.com/LeronBergelson/Opacity-iOS)
+By default when users run the local server with the Opacity iOS app [repo](https://github.com/LeronBergelson/Opacity-iOS)
 they will be able to authenticate via email registration. 
 
 The Opacity server also allows users to use social authentication to login through Facebook.
-To set it up when running the serve go to '127.0.0.1:8000/admin' and login with your superuser.
+To set it up when running the server go to '127.0.0.1:8000/admin' and login with your superuser.
 Then go to the 'Social Applications' section and add the Facebook social application.
 You will need to provide your Facebook app's keys that can be found in the Facebook App Developer Dashboard.
 
@@ -34,6 +35,5 @@ This will run the server at the address `127.0.0.1:8000`
 
 The django admin panel will be accessible at `127.0.0.1:8000/admin` -> this is where you can login with the superuser you created
 
-Now that the server is up and running you can follow the instructions on the Opacity iOS App [GitHub](https://github.com/ronyBesp/opacity-ios-client) page to set-up the app, connect it to the server and run the Opacity project :)
-
+Now that the server is up and running you can follow the instructions on the Opacity iOS App [GitHub](https://github.com/LeronBergelson/Opacity-iOS) page to set-up the app, connect it to the server and run the Opacity project :)
 
