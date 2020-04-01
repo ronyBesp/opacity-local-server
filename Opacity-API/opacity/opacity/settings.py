@@ -61,7 +61,7 @@ REST_FRAMEWORK = {
         'PAGE_SIZE': 20
         }
 
-MIDDLEWARE_CLASSES = [
+MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -77,7 +77,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            '~/Documents/opacity-web-server/rony/Opacity-API/opacity/opacity/templates',
+            '/Users/ronybesprozvanny/Documents/ppeProj/opacity-local-server/Opacity-API/opacity/opacity/templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -142,7 +142,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 TEMPLATE_URL = '/templates/'
 STATICFILES_DIRS = (
-    '/home/rony/Opacity-API/opacity/opacity/static/',
+    '/Users/ronybesprozvanny/Documents/ppeProj/opacity-local-server/Opacity-API/opacity/opacity/static/',
 )
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

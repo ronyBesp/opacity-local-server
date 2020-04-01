@@ -33,8 +33,8 @@ class Rating(models.Model):
     capacity = models.PositiveIntegerField()
 
     # Relationship Fields
-    user = models.ForeignKey(User, )
-    location = models.ForeignKey('api.Location', blank=True)
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
+    location = models.ForeignKey('api.Location', blank=True, on_delete=models.PROTECT)
 
     class Meta:
         ordering = ('-id',)
@@ -50,7 +50,7 @@ class UserData(models.Model):
     score = models.PositiveIntegerField()
 
     # Relationship Fields
-    user = models.OneToOneField(User, )
+    user = models.OneToOneField(User, on_delete=models.PROTECT)
     ratings = models.ManyToManyField('api.Rating', )
 
     class Meta:
